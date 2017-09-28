@@ -1,4 +1,4 @@
-#include "Calibrator.hpp"
+
 #include "opencv2/core/core.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/calib3d/calib3d.hpp"
@@ -9,11 +9,13 @@
 #include <string.h>
 #include <time.h>
 
+#include "Calibrator.h"
+
 using namespace cv;
 using namespace std;
 
-Calibrator::Calibrator(string outputPath) : squareSize(0.25f), aspectRatio(1.f), pattern(ASYMMETRIC_CIRCLES_GRID), mode(DETECTION), writeExtrinsics(false), writePoints(false), flipVertical(false), undistortImage(false), nframes(40), flags(0), delay(1000), prevTimestamp(0) {
-    boardSize = cv::Size(4, 11);
+Calibrator::Calibrator(string outputPath) : squareSize(0.04f), aspectRatio(1.f), pattern(ASYMMETRIC_CIRCLES_GRID), mode(DETECTION), writeExtrinsics(false), writePoints(false), flipVertical(false), undistortImage(false), nframes(40), flags(0), delay(1000), prevTimestamp(0) {
+    boardSize = cv::Size(3, 5);
     this->outputPath = outputPath;
 }
 

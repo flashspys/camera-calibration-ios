@@ -9,9 +9,7 @@
 #ifndef calibration_hpp
 #define calibration_hpp
 
-#include "opencv2/opencv.hpp"
 #include "BGRAVideoFrame.h"
-
 
 class Calibrator
 {

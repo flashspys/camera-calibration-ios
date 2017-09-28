@@ -27,3 +27,4 @@ xcuserdata/
 
 #CocoaPod
 Pods/*
+camera-calibration/opencv2.framework
